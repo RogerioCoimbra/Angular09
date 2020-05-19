@@ -1,9 +1,9 @@
 import {
   Directive,
-  OnInit,
   Input,
-  ViewContainerRef,
+  OnInit,
   TemplateRef,
+  ViewContainerRef,
 } from '@angular/core';
 
 @Directive({
@@ -18,8 +18,8 @@ export class ForDirective implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    for (let number of this.numbers) {
-      this.container.createEmbeddedView(this.template, { $implicit: number });
+    for (const _ of this.numbers) {
+      this.container.createEmbeddedView(this.template, { $implicit: _ });
     }
   }
 }
